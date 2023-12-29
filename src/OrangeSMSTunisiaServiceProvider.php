@@ -10,6 +10,10 @@ class OrangeSMSTunisiaServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/config/config.php', 'orange_sms_tunisia');
+
+        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+
+        $this->loadViewsFrom(__DIR__ . '/views', 'orange-sms-tunisia');
     }
 
     public function boot()

@@ -49,6 +49,20 @@ ORANGE_SMS_TUNISIA_AUTHORIZATION_HEADER="your_token_here"
     });
     ```
 
+## Dashboard
+
+The package provides a sample dashboard to **display the history of all SMS and available units**. The default route for accessing the dashboard is **/orange-sms-tunisia-dashboard**.
+
+<img src="screenshots/dashboard.png">
+
+By default, the dashboard is **disabled in a production environment**. However, you have the flexibility to manually enable or disable the dashboard, or even change the route name, by modifying the configuration file located at **config/orange_sms_tunisia.php**.
+
+```php
+ORANGE_SMS_TUNISIA_DASHBOARD_ENABLE=true
+```
+
+Feel free to customize the configuration according to your specific requirements.
+
 ## Configuration
 
 By default, the package logs all sent SMS messages and their status in a table named **orange_sms_tunisia_logs**. If you wish to disable this logging feature or rename the table name, you can update your .env file:

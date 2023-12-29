@@ -8,4 +8,14 @@ return [
     'authorization_header' => env('ORANGE_SMS_TUNISIA_AUTHORIZATION_HEADER', null),
 
     'sender' => env('ORANGE_SMS_TUNISIA_SENDER', null),
+
+    'dashboard' => [
+
+        'enable' => env('ORANGE_SMS_TUNISIA_DASHBOARD_ENABLE', !app()->isProduction()),
+
+        'route' => 'orange-sms-tunisia-dashboard',
+
+        'middleware' => ['web']
+
+    ]
 ];
