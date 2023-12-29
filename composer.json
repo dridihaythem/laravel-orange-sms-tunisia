@@ -1,0 +1,17 @@
+{
+    "name": "dridihaythem/laravel-orange-sms-tunisia",
+    "autoload": {
+        "psr-4": {
+            "DridiHaythem\\OrangeSMSTunisia\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Haythem Dridi",
+            "email": "haithemdridiweb@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^10.39"
+    }
+}
