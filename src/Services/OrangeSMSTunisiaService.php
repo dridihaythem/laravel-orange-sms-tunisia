@@ -24,6 +24,22 @@ class OrangeSMSTunisiaService
         return $response['access_token'];
     }
 
+    public function getAvailableUnits(): int
+    {
+        $token = $this->authentication();
+
+        $request = Http::withToken($token)
+            ->get('https://api.orange.com/sms/admin/v1/contracts');
+
+        $response = $request->json();
+
+        if (!array_key_exists('availableUnits', $response[0])) {
+            throw new \Exception('[OrangeSMSTunisia] Unable to get balance.');
+        }
+
+        return $response[0]['availableUnits'];
+    }
+
     public function sendSms(int $phone, String $message)
     {
         if (config('orange_sms_tunisia.authorization_header') == null) {

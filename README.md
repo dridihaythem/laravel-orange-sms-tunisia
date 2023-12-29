@@ -24,18 +24,30 @@ ORANGE_SMS_TUNISIA_AUTHORIZATION_HEADER="your_token_here"
 
 ## Example
 
-You can use the package to send an SMS by calling the **sendSms** method on the **OrangeSMSTunisiaService** class. Here's a quick example in a Laravel route closure:
+-   Send SMS :
 
-```php
-use DridiHaythem\OrangeSMSTunisia\Services\OrangeSMSTunisiaService;
+    You can use the package to send an SMS by calling the **sendSms** method on the **OrangeSMSTunisiaService** class. Here's a quick example in a Laravel route closure:
 
-Route::get('/send-sms', function (OrangeSMSTunisiaService $service) {
-    $response = $service->sendSms(29175235, "Hello, this is a test message.");
+    ```php
+    use DridiHaythem\OrangeSMSTunisia\Services\OrangeSMSTunisiaService;
 
-    // Handle the response as needed...
+    Route::get('/send-sms', function (OrangeSMSTunisiaService $service) {
+        $response = $service->sendSms(29175235, "Hello, this is a test message.");
 
-});
-```
+        // Handle the response as needed...
+
+    });
+    ```
+
+-   get available units :
+
+    ```php
+    use DridiHaythem\OrangeSMSTunisia\Services\OrangeSMSTunisiaService;
+
+    Route::get('/sms-balance', function (OrangeSMSTunisiaService $service) {
+        return $service->getAvailableUnits()
+    });
+    ```
 
 ## Configuration
 
