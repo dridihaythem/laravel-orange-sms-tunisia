@@ -55,10 +55,11 @@ The package provides a sample dashboard to **display the history of all SMS and 
 
 <img src="screenshots/dashboard.png">
 
-By default, the dashboard is **disabled in a production environment**. However, you have the flexibility to manually enable or disable the dashboard, or even change the route name, by modifying the configuration file located at **config/orange_sms_tunisia.php**.
+By default, the dashboard is **enabled**. However, you have the flexibility to manually enable or disable the dashboard, or even change the route name, by modifying the configuration file located at **config/orange_sms_tunisia.php** or using .env.
 
 ```php
 ORANGE_SMS_TUNISIA_DASHBOARD_ENABLE=true
+ORANGE_SMS_TUNISIA_DASHBOARD_ROUTE=orange-sms-tunisia-dashboard
 ```
 
 Feel free to customize the configuration according to your specific requirements.

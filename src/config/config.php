@@ -11,9 +11,9 @@ return [
 
     'dashboard' => [
 
-        'enable' => env('ORANGE_SMS_TUNISIA_DASHBOARD_ENABLE', !app()->isProduction()),
+        'enable' => env('ORANGE_SMS_TUNISIA_DASHBOARD_ENABLE', true),
 
-        'route' => 'orange-sms-tunisia-dashboard',
+        'route' => env('ORANGE_SMS_TUNISIA_DASHBOARD_ROUTE', 'orange-sms-tunisia-dashboard'),
 
         'middleware' => ['web']
 
